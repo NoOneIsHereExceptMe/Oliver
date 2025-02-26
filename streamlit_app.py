@@ -43,7 +43,7 @@ def setup_gemini():
     """Initialize the Gemini API client."""
     api_key = st.secrets["GOOGLE_API_KEY"]
     genai.configure(api_key=api_key)
-    return genai.GenerativeModel('gemini-pro', 
+    return genai.GenerativeModel('gemini-1.5-flash', 
                                 safety_settings={
                                     'HATE': 'BLOCK_NONE',
                                     'HARASSMENT': 'BLOCK_NONE',
